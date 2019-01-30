@@ -45,6 +45,10 @@ SELECT *
 FROM dogs
 WHERE id = ?;
 SQL
+
+array = DB[:conn].execute(sql,id)[0][0]
+
+
 end
 
 end
