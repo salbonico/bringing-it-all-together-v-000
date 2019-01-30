@@ -60,7 +60,7 @@ SQL
 returned_dog = DB[:conn].execute(sql,name,breed)
 
 if !returned_dog.empty?
-  return Dog.new(returned_dog[0],returned_dog[1],returned_dog[2])
+  return Dog.new({id:returned_dog[0],name:returned_dog[1],breed:returned_dog[2]})
 else
   self.create({name:name, breed:breed})
 end
