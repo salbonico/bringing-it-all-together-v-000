@@ -53,7 +53,7 @@ def self.find_or_create_by(name:,breed:)
 sql = <<-SQL
 SELECT *
 FROM dogs
-WHERE name = ? 
+WHERE name = ?
 AND breed = ?;
 SQL
 
@@ -62,7 +62,7 @@ returned_dog = DB[:conn].execute(sql,name,breed)
 if !returned_dog.empty?
   return returned_dog
 else
-  self.create(name,breed)
+  self.create({name:name, breed:breed})
 end
 end
 end
