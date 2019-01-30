@@ -34,7 +34,7 @@ self
 end
 
 def self.create(input)
-new_dog = self.new(input.name,input.breed)
+new_dog = self.new(input)
 new_dog.save
 new_dog
 end
