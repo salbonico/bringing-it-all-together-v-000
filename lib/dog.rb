@@ -71,4 +71,7 @@ new_dog = Dog.new(id:row[0],name:row[1],breed:row[2])
 new_dog
 end
 
+def self.find_by_name
+
+
 end
