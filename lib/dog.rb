@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS dogs(
   breed TEXT
 );
 SQL
-
 DB[:conn].execute(sql)
 end
 
