@@ -71,7 +71,13 @@ new_dog = Dog.new(id:row[0],name:row[1],breed:row[2])
 new_dog
 end
 
-def self.find_by_name
+def self.find_by_name(name)
+  sql = <<-SQL
+  SELECT *
+  FROM dogs
+  WHERE name = ?;
+  SQL
 
+Dog.new_from_db(DB[:conn].execute(sql,name)[0][0])
 
 end
