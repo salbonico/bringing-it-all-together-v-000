@@ -66,7 +66,9 @@ else
 end
 end
 
+def self.new_from_db(row)
+new_dog = Dog.new(id:row[0],name:[1],breed[2])
 
-
+end
 
 end
