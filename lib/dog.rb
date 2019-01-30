@@ -47,7 +47,7 @@ WHERE id = ?;
 SQL
 
 array = DB[:conn].execute(sql,id)[0]
-self.new(array[0],array[1],array[2])
+self.new(id:array[0],name:array[1],breed:array[2])
 
 end
 
