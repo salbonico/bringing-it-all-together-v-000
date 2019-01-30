@@ -46,8 +46,8 @@ FROM dogs
 WHERE id = ?;
 SQL
 
-array = DB[:conn].execute(sql,id)[0][0]
-
+array = DB[:conn].execute(sql,id)[0]
+self.new(array[0],array[1],array[2])
 
 end
 
