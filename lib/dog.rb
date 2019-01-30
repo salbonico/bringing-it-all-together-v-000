@@ -49,7 +49,7 @@ array = DB[:conn].execute(sql,id)[0]
 self.new(id:array[0],name:array[1],breed:array[2])
 end
 
-def self.find_or_create_by(name,breed)
+def self.find_or_create_by(name:,breed:)
 sql = <<-SQL
 SELECT *
 FROM dogs
