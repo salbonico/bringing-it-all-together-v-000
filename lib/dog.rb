@@ -45,10 +45,8 @@ SELECT *
 FROM dogs
 WHERE id = ?;
 SQL
-
 array = DB[:conn].execute(sql,id)[0]
 self.new(id:array[0],name:array[1],breed:array[2])
-
 end
 
 end
