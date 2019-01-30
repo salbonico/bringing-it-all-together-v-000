@@ -58,5 +58,8 @@ SQL
 
 returned_dog = DB[:conn].execute(sql,name,breed)
 
-
+if !returned_dog.empty?
+  return returned_dog
+else
+  self.create(name:name,breed:breed)
 end
